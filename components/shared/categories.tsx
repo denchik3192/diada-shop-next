@@ -3,8 +3,8 @@ import React from 'react';
 
 type Props = { className?: string };
 
-const categories = ['Чаи', 'мед', 'урбеч', 'жиры', 'Кофе', 'Напитки', 'Десерты'];
-// const categories = ['Пиццы', 'Комбо', 'Закуски', 'Коктелт', 'Кофе', 'Напитки', 'Десерты'];
+// const categories = ['Чаи', 'мед', 'урбеч', 'жиры', 'Кофе', 'Напитки', 'Десерты'];
+const categories = ['Пиццы', 'Комбо', 'Закуски', 'Коктелт', 'Кофе', 'Напитки', 'Десерты'];
 const activeIdx = 0;
 
 const Categories: React.FC<Props> = ({ className }) => {

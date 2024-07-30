@@ -2,8 +2,9 @@ import React from 'react';
 import { Container } from './container';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
-import { Button } from '../button';
+import { Button } from '../ui/button';
 import { ArrowRight, ShoppingCart, User } from 'lucide-react';
+import { Title } from './title';
 
 type Props = { className?: string };
 
@@ -12,7 +13,7 @@ const Header: React.FC<Props> = ({ className }) => {
     <header className={cn('border border-b', className)}>
       <Container className="flex items-center justify-between py-8">
         <div>
-          <Image src={'/next.svg'} alt="Logo" width={100} height={100} />
+          <Title text="DIADA" size="lg" className="font-extrabold"></Title>
         </div>
         <div className="flex items-center">
           <Button className="mr-4 flex items-center gap-1" variant={'outline'}>
