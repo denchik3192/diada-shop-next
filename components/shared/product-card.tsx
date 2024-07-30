@@ -18,9 +18,9 @@ const ProductCard: React.FC<IProductCardProps> = ({ id, name, description, image
     <div>
       <Link href={`/catalog/${id}`}>
         <div className="flex justify-center p-6 bg-secondary rounded-lg h-[260px]">
-          <Image
+          <img
             // className="w-[215px] h-[215px]"
-            src={`${imageURL === undefined ? '/next.svg' : `${imageURL}`}`} //fix
+            src={`${imageURL}`} //fix
             width={215}
             height={215}
             alt="product card"
@@ -35,7 +35,7 @@ const ProductCard: React.FC<IProductCardProps> = ({ id, name, description, image
             tempora, deserunt nesciunt alias sapiente laboriosam ab doloremque.{description}
           </p>
           <div className="flex items-center justify-between mt-4">
-            <span className="text-[20px]">{price}</span>
+            <span className="text-[20px]">{price} $</span>
             <Button>
               <Plus className="w-5 h-5 mr-1" />В корзину
             </Button>

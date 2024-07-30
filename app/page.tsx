@@ -23,15 +23,96 @@ export default function Home() {
           <div className="flex-1">
             <div className="flex flex-col gap-16">
               <ProductsGroupList
-                title={''}
+                title={'Пиццы'}
                 products={[
-                  { id: 1, name: 'tea', imageURL: '', price: 550, items: [{ price: 500 }] },
-                  { id: 1, name: 'tea', imageURL: '', price: 550, items: [{ price: 500 }] },
-                  { id: 1, name: 'tea', imageURL: '', price: 550, items: [{ price: 500 }] },
-                  { id: 1, name: 'tea', imageURL: '', price: 550, items: [{ price: 500 }] },
-                  { id: 1, name: 'tea', imageURL: '', price: 550, items: [{ price: 500 }] },
+                  {
+                    id: 1,
+                    name: 'tea',
+                    imageURL:
+                      'https://media.dodostatic.net/image/r:292x292/11EF0234EAFD8424A3D86A21876DE68C.avif',
+                    price: 550,
+                    items: [{ price: 500 }],
+                  },
+                  {
+                    id: 2,
+                    name: 'tea',
+                    imageURL:
+                      'https://media.dodostatic.net/image/r:292x292/11EE7D5F2F13041E9101158D09CEBAE0.avif',
+                    price: 550,
+                    items: [{ price: 500 }],
+                  },
+                  {
+                    id: 3,
+                    name: 'fat',
+                    imageURL:
+                      'https://media.dodostatic.net/image/r:292x292/11EF0234EAFD8424A3D86A21876DE68C.avif',
+                    price: 550,
+                    items: [{ price: 500 }],
+                  },
+                  {
+                    id: 4,
+                    name: 'tea',
+                    imageURL:
+                      'https://media.dodostatic.net/image/r:292x292/11EF0234EAFD8424A3D86A21876DE68C.avif',
+                    price: 550,
+                    items: [{ price: 500 }],
+                  },
+                  {
+                    id: 5,
+                    name: 'tea',
+                    imageURL:
+                      'https://media.dodostatic.net/image/r:292x292/11EF0234EAFD8424A3D86A21876DE68C.avif',
+                    price: 550,
+                    items: [{ price: 500 }],
+                  },
                 ]}
                 categoryId={0}
+              />
+              <ProductsGroupList
+                title={'Комбо'}
+                products={[
+                  {
+                    id: 1,
+                    name: 'tea',
+                    imageURL:
+                      'https://media.dodostatic.net/image/r:292x292/11EF0234EAFD8424A3D86A21876DE68C.avif',
+                    price: 550,
+                    items: [{ price: 500 }],
+                  },
+                  {
+                    id: 2,
+                    name: 'tea',
+                    imageURL:
+                      'https://media.dodostatic.net/image/r:292x292/11EE7D5F2F13041E9101158D09CEBAE0.avif',
+                    price: 550,
+                    items: [{ price: 500 }],
+                  },
+                  {
+                    id: 3,
+                    name: 'fat',
+                    imageURL:
+                      'https://media.dodostatic.net/image/r:292x292/11EF0234EAFD8424A3D86A21876DE68C.avif',
+                    price: 550,
+                    items: [{ price: 500 }],
+                  },
+                  {
+                    id: 4,
+                    name: 'tea',
+                    imageURL:
+                      'https://media.dodostatic.net/image/r:292x292/11EF0234EAFD8424A3D86A21876DE68C.avif',
+                    price: 550,
+                    items: [{ price: 500 }],
+                  },
+                  {
+                    id: 5,
+                    name: 'tea',
+                    imageURL:
+                      'https://media.dodostatic.net/image/r:292x292/11EF0234EAFD8424A3D86A21876DE68C.avif',
+                    price: 550,
+                    items: [{ price: 500 }],
+                  },
+                ]}
+                categoryId={1}
               />
             </div>
           </div>
