@@ -8,6 +8,7 @@ export async function GET() {
 
 export async function POST(reqest: NextRequest) {
     const data = await reqest.json()
+    
     const user = prisma.user.create(data)
     return NextResponse.json(user)
 }
