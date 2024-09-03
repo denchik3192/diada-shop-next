@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Button } from '../ui/button';
 import { ArrowRight, ShoppingCart, User } from 'lucide-react';
 import { Title } from './title';
+import SearchInput from './search-input';
 
 type Props = { className?: string };
 
@@ -15,6 +16,11 @@ const Header: React.FC<Props> = ({ className }) => {
         <div>
           <Title text="DIADA" size="lg" className="font-extrabold"></Title>
         </div>
+
+        <div className="mx-10 flex-1">
+          <SearchInput />
+        </div>
+
         <div className="flex items-center">
           <Button className="mr-4 flex items-center gap-1" variant={'outline'}>
             <User size={16} />
