@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSet } from 'react-use';
 
 import { Input } from '../ui/input';
@@ -33,12 +33,14 @@ export const CheckboxFiltersGroup: React.FC<Props> = ({
   loading,
   name,
 }) => {
-  const [showAll, setShowAll] = React.useState(true);
+  const [showAll, setShowAll] = React.useState(false);
   const [searchValue, setSearchValue] = React.useState('');
 
   const filtredItems = items.filter((item) =>
     item.text.toLowerCase().includes(searchValue.toLowerCase()),
   );
+
+  useEffect(() => {});
 
   if (loading) {
     return (
