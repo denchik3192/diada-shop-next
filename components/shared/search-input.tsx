@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils';
 import { Api } from '@/services/api-client';
 import { Product } from '@prisma/client';
 import { Search } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { useClickAway, useDebounce } from 'react-use';
@@ -23,10 +24,14 @@ export const SearchInput: React.FC = () => {
   };
 
   useDebounce(
-    () => {
-      Api.products.search(searchQuery).then((items) => {
-        setProducts(items);
-      });
+    async () => {
+      try {
+        Api.products.search(searchQuery).then((items) => {
+          setProducts(items);
+        });
+      } catch (error) {
+        console.log(error);
+      }
     },
     250,
     [searchQuery],
@@ -58,10 +63,15 @@ export const SearchInput: React.FC = () => {
               isFocused && 'visible opacity-100 top-12',
             )}>
             {products?.map((product) => (
-              <Link href={`/product/${product.id}`} key={product.id}>
-                <div onClick={onClickItem} className="px-3 py-2 hover:bg-primary/10 cursor-pointer">
-                  {product.name}
-                </div>
+              <Link
+                className={
+                  'flex items-center gap-3 w-full px-3 py-2 hover:bg-primary/10 cursor-pointer'
+                }
+                onClick={onClickItem}
+                href={`/product/${product.id}`}
+                key={product.id}>
+                <img src={product.imageUrl} width={25} height={25} alt="product image" />
+                <span>{product.name}</span>
               </Link>
             ))}
           </div>

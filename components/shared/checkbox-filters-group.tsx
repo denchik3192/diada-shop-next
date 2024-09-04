@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-// import { useSet } from 'react-use';
+import { useSet } from 'react-use';
 
 import { Input } from '../ui/input';
 import { FilterChecboxProps, FilterCheckbox } from '../ui/filter-checkbox';
@@ -16,7 +16,7 @@ interface Props {
   searchInputPlaceholder?: string;
   className?: string;
   selectedIds?: Set<string>;
-  onClickCheckbox?: (value: string) => void;
+  onClickCheckbox?: (id: string) => void;
   loading?: boolean;
   name?: string;
 }
@@ -74,7 +74,6 @@ export const CheckboxFiltersGroup: React.FC<Props> = ({
         {(showAll ? filtredItems : defaultItems || filtredItems).map((item) => (
           <FilterCheckbox
             onCheckedChange={() => onClickCheckbox?.(item.value)}
-            checked={false}
             key={String(item.value)}
             value={item.value}
             text={item.text}
