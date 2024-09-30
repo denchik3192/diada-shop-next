@@ -3,14 +3,17 @@ import { ingredients } from './../prisma/constants';
 import { useEffect, useState } from 'react';
 import { Api } from '@/services/api-client';
 import { useSet } from 'react-use';
+
 interface IProps {
     ingredients: Ingredient[]
     loading: boolean
+    selectedIds: Set<string>
+    toggleSelectedIds: (id: string) => void
+
 }
-export const useFilterIngredients = (): IProps => {
+export const useIngredients = (): IProps => {
     const [ingredients, setIngredients] = useState<Ingredient[]>([])
     const [loading, setLoading] = useState<boolean>(false)
-
 
 
     useEffect(() => {

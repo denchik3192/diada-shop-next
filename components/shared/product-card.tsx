@@ -9,22 +9,16 @@ type IProductCardProps = {
   id: number;
   name: string;
   description?: string;
-  imageURL: string;
+  imageUrl: string;
   price: number;
 };
 
-const ProductCard: React.FC<IProductCardProps> = ({ id, name, description, imageURL, price }) => {
+const ProductCard: React.FC<IProductCardProps> = ({ id, name, description, imageUrl, price }) => {
   return (
     <div>
-      <Link href={`/catalog/${id}`}>
+      <Link href={`/product/${id}`}>
         <div className="flex justify-center p-6 bg-secondary rounded-lg h-[260px]">
-          <img
-            // className="w-[215px] h-[215px]"
-            src={`${imageURL}`} //fix
-            width={215}
-            height={215}
-            alt="product card"
-          />
+          <img className="w-[215px] h-[215px]" src={imageUrl} alt={name} />
         </div>
 
         <div>

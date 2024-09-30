@@ -78,6 +78,7 @@ export const CheckboxFiltersGroup: React.FC<Props> = ({
             onCheckedChange={() => onClickCheckbox?.(item.value)}
             key={String(item.value)}
             value={item.value}
+            checked={selectedIds?.has(item.value)}
             text={item.text}
             endAdornment={item.endAdornment}
             name={name}
